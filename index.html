@@ -5,67 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalendarz</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #191919;
-        }
-        .calendar {
-            width: 350px;
-            background: #191919;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 20px;
-            color: #9b9b9b;
-        }
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #9b9b9b;
-        }
-        .calendar-header button {
-            background: none;
-            border: none;
-            font-size: 1.5em;
-            color: #9b9b9b;
-            cursor: pointer;
-        }
-        .weekdays, .days {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-        }
-        .weekdays div {
-            font-weight: bold;
-            color: #9b9b9b;
-        }
-        .days div {
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-            user-select: none;
-            color: #9b9b9b;
-        }
-        .days div:hover {
-            background: #9b9b9b;
-            color: #191919;
-            border-radius: 50%;
-        }
-        .selected {
-            background: #9b9b9b;
-            color: #191919;
-            border-radius: 50%;
-        }
-    </style>
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #191919;
+}
+
+.calendar {
+  width: 350px;
+  background: #191919;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  color: #9b9b9b;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #9b9b9b;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #9b9b9b;
+  cursor: pointer;
+}
+
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.weekdays div {
+  font-weight: bold;
+  color: #9b9b9b;
+}
+
+.days div {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  color: #9b9b9b;
+}
+
+.days div:hover {
+  background: #9b9b9b;
+  color: #191919;
+  border-radius: 6px; /* Delikatne zaokrąglenie rogów przy najechaniu */
+}
+
+.selected {
+  background: #9b9b9b;
+  color: #191919; /* Kolor tekstu, aby był widoczny */
+  border-radius: 6px; /* Kwadrat z delikatnie zaokrąglonymi rogami */
+  padding: 10px; /* Upewnia się, że zaznaczenie ma odpowiednie wymiary */
+  box-shadow: none; /* Brak cienia, aby styl był prostszy */
+}    </style>
 </head>
 <body>
     <div class="calendar">
