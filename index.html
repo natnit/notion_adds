@@ -12,27 +12,30 @@
             justify-content: center;
             align-items: center;
             height: auto;
-            margin: 0;
+            margin: 5px;
             background-color: #191919;
         }
 
         .calendar {
-            width: auto;
+            width: 100%;
+            max-width: 350px;
             background: #191919;
-            border-radius: 10px;
+            border-radius: 5px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            padding: 20px;
+            padding: 5px;
             color: #9b9b9b;
+            box-sizing: border-box;
+            font-size: 0.9em;
         }
 
         .calendar-header {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.4em;
+            font-size: 1.2em;
             font-weight: bold;
-            margin-bottom: 18px;
+            margin-bottom: 10px;
             color: #9b9b9b;
             gap: 5px;
         }
@@ -40,7 +43,7 @@
         .calendar-header button {
             background: none;
             border: none;
-            font-size: 1.2em;
+            font-size: 1em;
             color: #9b9b9b;
             cursor: pointer;
         }
@@ -49,7 +52,7 @@
         .days {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
+            gap: 4px;
         }
 
         .weekdays div {
@@ -58,10 +61,12 @@
         }
 
         .days div {
-            padding: 10px;
+            padding: 6px;
             text-align: center;
             cursor: pointer;
             color: #9b9b9b;
+            width: 20px;  
+            height: 20px; 
         }
 
         .days div:hover {
